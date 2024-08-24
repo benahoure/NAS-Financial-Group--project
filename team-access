@@ -10,6 +10,7 @@ IAM Users with Roles:
 Lion_Consulting: Full Admin access / No billing access
 NASFGS: Full admin with Billing access
 NASFGO: Full Admin access to N-Virginia only (us-east-1 region N-Virginia)
+
 2. Build a Public Dynamic Website (High Availability & Security)
 VPC: Create "nasfg-vpc"
 Subnets:
@@ -33,14 +34,16 @@ Auto-Scaling: Use launch templates
 Database: Multi-AZ database with a read replica
 EFS, RDS, CloudWatch, SNS: Set up for storage, databases, and notifications
 IAM Roles for SSM or SSH
+
 3. Build a Private Intranet Application
 AMI: Create from existing servers and make it private
 NAT Gateway: Connect to IGW
 Intranet Load Balancer: Allow HTTP traffic from private subnets
 Bastion Host:
-EC2 in public subnet with access to instances in the private subnet
+EC2 in the public subnet with access to instances in the private subnet
 Configure private instance SG to allow SSH from private EC2
 DNS: Create a subdomain
+
 4. Auditing by N2G Auditing
 IAM User Role:
 Create IAM user role with read-only access for the audit company
@@ -49,6 +52,7 @@ Set up between NAS Financial Group and N2G Auditing (student account)
 Security Tools:
 AWS Config or GuardDuty for full access to N2G
 Add Trusted Advisor
+
 5. Storage Requirements
 Customer Information Storage:
 Encrypt PII at rest
